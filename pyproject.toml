@@ -1,13 +1,36 @@
-[build-system]
-requires = ["setuptools", "wheel"]
-# Use legacy backend to import local packages in setup.py
-build-backend = "setuptools.build_meta:__legacy__"
+[tool.poetry]
+name = "benchmark"
+package-mode = false
 
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
 
-[tool.black]
-line-length = 88
-target-version = ["py38"]
-exclude = '''/submodules/.*'''
+torch = "^2.5"
+torchvision = "^0.20.1"
+torchaudio = "^2.5.1"
 
-[tool.usort]
-excludes = ["**/submodules/**"]
+accelerate = "^1.2.1"
+boto3 = "^1.35.84"
+numpy = "^2.0"
+bs4 = "^0.0.2"
+patch = "^1.16"
+py-cpuinfo = "^9.0.0"
+distro = "^1.9.0"
+iopath = "^0.1.10"
+pytest = "^8.3.4"
+pytest-benchmark = "^5.1.0"
+requests = "^2.32.3"
+tabulate = "^0.9.0"
+monkeytype = "^23.3.0"
+psutil = "^6.1.0"
+pyyaml = "^6.0.2"
+opencv-python = "^4.10.0.84"
+submitit = "^1.5.2"
+pandas = "^2.2.3"
+scipy = "^1.14.1"
+numba = "^0.60.0"
+pynvml = "^12.0.0"
+transformers = "=4.44.2"
+timm = {git = "https://github.com/huggingface/pytorch-image-models.git", rev = "730b907"}
+tensorboardx = "^2.6.2.2"
+
